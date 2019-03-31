@@ -21,6 +21,7 @@ public class test{
 public WebDriver driver;
 	@Given("^user is  on google searchpage$")
 	public void user_is_on_google_searchpage() throws Throwable {
+		//Please change the chromedriver path here:
 		System.setProperty("webdriver.chrome.driver","/Users/Arunthiru/Downloads/Chrome/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
