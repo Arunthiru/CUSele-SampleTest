@@ -52,7 +52,7 @@ public WebDriver driver;
 		 SearchPage sp= new SearchPage(driver);
 		 sp.Thirdresult().click();
 		 String URL = driver.getCurrentUrl();
-		 Assert.assertEquals(URL,"https://twitter.com/hashta/techbeacon");
+		 Assert.assertEquals(URL,"https://twitter.com/hashtag/techbeacon");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	    driver.quit();
 	      
