@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 features ="src/test/java/features"
 ,glue= {"seleniumgluecode"}
-,tags= {"@Testing"}
+//,tags= {"@Testing"}
 ,monochrome = true
 ,plugin = {"pretty", "html:target/cucumber-html-report"}
 //,plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}

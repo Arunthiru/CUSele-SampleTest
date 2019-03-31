@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByLinkText;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -32,7 +33,6 @@ public WebDriver driver;
 		SearchPage sp= new SearchPage(driver);
 		sp.Searchfield().click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    // Write code here that turns the phrase above into concrete actions
 	    
 	}
 
@@ -41,9 +41,10 @@ public WebDriver driver;
 		SearchPage sp= new SearchPage(driver);
 		sp.Searchfield().sendKeys("TechBeacon");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		sp.Googlesearch().click();
+		sp.Searchfield().sendKeys(Keys.ENTER);
+		//sp.Googlesearch().click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	    // Write code here that turns the phrase above into concrete actions
+	    
 
 	}
 
@@ -53,7 +54,7 @@ public WebDriver driver;
 		 sp.Thirdresult().click();
 		 String URL = driver.getCurrentUrl();
 		 Assert.assertEquals(URL,"https://twitter.com/hashtag/techbeacon");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	    driver.quit();
 	      
 	    
